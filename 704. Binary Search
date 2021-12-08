@@ -4,7 +4,8 @@ class Solution {
         
         while(low <= high)
         {
-            int mid = (low + high) / 2; 
+            //int mid = (low + high) / 2;
+            int mid = low + (high - low) / 2; //to save from overflow 
             
             if(nums[mid] == target)
             {
