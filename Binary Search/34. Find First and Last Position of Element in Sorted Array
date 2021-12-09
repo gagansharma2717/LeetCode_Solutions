@@ -3,7 +3,7 @@ class Solution {
     {
         int left = 0 ;
         int right = nums.length -1;
-        int fo = -1;
+        int fo = -1; //first occurence
         while(left <= right)
         {
             int mid = left + (right - left ) / 2;
@@ -30,7 +30,7 @@ class Solution {
     {
         int left = 0 ;
         int right = nums.length -1;
-        int lo = -1;
+        int lo = -1; //last occurence
         while(left <= right)
         {
             int mid = left + (right - left ) / 2;
@@ -66,3 +66,4 @@ class Solution {
         return ans;
     }
 }
+//We need to  take two methods because when nums[mid] is equal to target then hme 2 directions m jaana h we can achieve it using 2 methods only. 
