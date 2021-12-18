@@ -1,9 +1,10 @@
 class Solution {
     public int mySqrt(int x) {
+        if(x == 0) return 0;
         
-        long left = 1 , right = x;
+        long left = 1L , right = x;
         
-        long floorsqrt = 0;
+        long floorsqrt = 1;
         
         while(left <= right)
         {
