@@ -1,4 +1,4 @@
-int[] lowerCase = new int[26];
+        int[] lowerCase = new int[26];
         int[] upperCase = new int[26];
         int[] digits = new int[10];
         
