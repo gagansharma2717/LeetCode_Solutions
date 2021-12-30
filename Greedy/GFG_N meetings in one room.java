@@ -1,7 +1,7 @@
 // { Driver Code Starts
     import java.io.*;
     import java.util.*;
-    import java.lang.*;
+    //import java.lang.*;
     
     class GFG {
         public static void main(String args[]) throws IOException {
