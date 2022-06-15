@@ -5,16 +5,22 @@ class Solution {
     public void permutations(int currBox, boolean[] itemsPlaced, List<Integer> boxes,int[] nums, List<List<Integer>> res)
     {
         if(currBox == nums.length){
+            // shallow copy
             List<Integer> temp = new ArrayList<>(boxes);
             res.add(temp);
             return;
         }
         
+        // Traversing Each item
         for(int i = 0 ; i < nums.length; i++){
+            // If it is not placed
             if(itemsPlaced[i] == false){
+                // Mark item as placed and add it to the box
                 itemsPlaced[i] = true;
                 boxes.add(nums[i]);
                 permutations(currBox+1,itemsPlaced,boxes,nums,res);
+                // bactracking step
+                // Removing last item from boxes arraylist and marking it as unplaced
                 boxes.remove(boxes.size()-1);
                 itemsPlaced[i] = false;
             }
