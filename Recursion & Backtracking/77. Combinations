@@ -1,8 +1,9 @@
+// 1.
 // Boxes on Level
 //Medium
 class Solution {
     
-    //ipsf -- > items placed so far
+   
     public void combine(List<List<Integer>> combinations, List<Integer> combination, int currBox, int n, int k)
     {
         
@@ -11,8 +12,8 @@ class Solution {
         {
             if(combination.size() == k)
             {
-                //deep copy
-                // bcoz we are remove reference after call so wecannot shallow copy it
+                // We have to use deep copy here 
+                // Bcoz we are removing reference after call in backtracking step so we cannot shallow copy it.
                 List<Integer> temp = new ArrayList<>(combination);
                 combinations.add(temp);
             }
@@ -24,7 +25,7 @@ class Solution {
         //yes
         combination.add(currBox + 1);
         combine(combinations, combination, currBox + 1, n , k );
-        combination.remove(combination.size() - 1);
+        combination.remove(combination.size()- 1);
         
         
         //no
@@ -36,8 +37,7 @@ class Solution {
         List<List<Integer>> combinations = new ArrayList<>();
         //current combination
         List<Integer> combination = new ArrayList<>();
-        
-        
+         
         combine(combinations, combination, 0, n, k);
         
         return combinations;

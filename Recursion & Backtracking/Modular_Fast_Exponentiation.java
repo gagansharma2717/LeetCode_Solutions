@@ -2,7 +2,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+public class Modular_Fast_Exponentiation {
 	public static long xpown(long x, long n, long mod) {
 	    
 	    if(n == 0 ) return 1;
