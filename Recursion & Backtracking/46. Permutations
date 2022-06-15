@@ -1,4 +1,37 @@
-// Items on Level and Items == Boxes
+// 5.
+// Method 1
+// Boxes on Level
+class Solution {
+    public void permutations(int currBox, boolean[] itemsPlaced, List<Integer> boxes,int[] nums, List<List<Integer>> res)
+    {
+        if(currBox == nums.length){
+            List<Integer> temp = new ArrayList<>(boxes);
+            res.add(temp);
+            return;
+        }
+        
+        for(int i = 0 ; i < nums.length; i++){
+            if(itemsPlaced[i] == false){
+                itemsPlaced[i] = true;
+                boxes.add(nums[i]);
+                permutations(currBox+1,itemsPlaced,boxes,nums,res);
+                boxes.remove(boxes.size()-1);
+                itemsPlaced[i] = false;
+            }
+        }
+    }
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> boxes = new ArrayList<>();
+        boolean[] itemsPlaced = new boolean[nums.length];
+        
+        permutations(0, itemsPlaced, boxes,nums,res);
+        return res;
+    }
+}
+
+// Method 2
+// Items on Level 
 //Swap Method 
 class Solution {
     public void swap(int[] nums, int i , int j)

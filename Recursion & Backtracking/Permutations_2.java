@@ -1,14 +1,15 @@
+// 2.
 //Boxes on Level
 
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Permutations_2  {
 
     // n --> no of items
     // k --> no of boxes
   public static void permutations(int currBox, int n, int k, boolean[] itemPlaced, String boxes, int itemPlacedCount){
-    // write your code here
+    
     
     if(currBox == n)
     {
@@ -19,18 +20,21 @@ public class Main {
         
         return;
     }
-    
+    // Traversing till k
     for(int i = 0 ; i < k ; i++)
     {
+        // If item is unplaced
         if(itemPlaced[i] == false)
         {
-        itemPlaced[i] = true;
-        permutations(currBox + 1, n , k , itemPlaced, boxes + (i + 1), itemPlacedCount + 1);
-        itemPlaced[i] = false;
+          // place the item 
+          itemPlaced[i] = true;
+          permutations(currBox + 1, n, k, itemPlaced, boxes + (i + 1), itemPlacedCount + 1);
+          //backtracking step
+          itemPlaced[i] = false;
         }
     }
     
-    // currentBox -> Do not place any element
+    // currentBox -> Do not place any item
     permutations(currBox + 1, n, k, itemPlaced, boxes + 0, itemPlacedCount);
     
   }
@@ -41,7 +45,6 @@ public class Main {
     int k = Integer.parseInt(br.readLine());
     
     String boxes = "";
-    
     boolean[] itemPlaced = new boolean[k];
     permutations(0, n, k, itemPlaced, boxes, 0 );
   }
