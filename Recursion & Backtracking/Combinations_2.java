@@ -1,8 +1,6 @@
-// 4. 
+// 7. 
 //Items on Level
 import java.io.*;
-import java.util.*;
-
 public class Combinations_2 {
 
   public static void combinations(int currentItem, int k,int[] boxes, int lastIdx){

@@ -1,6 +1,4 @@
-import java.io.*;
 import java.util.*;
-
 public class All_Palindromic_Partitions {
     public static boolean isPalindrome(String s){
         int i = 0 ; 

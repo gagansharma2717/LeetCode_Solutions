@@ -1,4 +1,5 @@
-//PepCoding Level 3
+//2.
+//PepCoding
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -20,9 +21,8 @@ public class Modular_Fast_Exponentiation {
 	}
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		Scanner scn = new Scanner(System.in);
-		StringBuilder sb = new StringBuilder();
-		
+			Scanner scn = new Scanner(System.in);
+	
 			long x = scn.nextInt();
 			long n = scn.nextInt();
             //Tried End m ans m mod kiya but vo run nhi hua 1 test case fail hua then done this mod at each level using int this also not worked and data type long liya toh ho gya
