@@ -1,8 +1,6 @@
-// 3.
+// 6.
 // items on Level
 import java.io.*;
-import java.util.*;
-
 public class Permutation_1 {
     
     // n --> number of boxes
