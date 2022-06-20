@@ -15,15 +15,13 @@ class Solution {
         
         for(List<Integer> subSet : tres)
         {
+            // newSubset --> Yes choice
             List<Integer> newSubset = new ArrayList<>();
-            
             newSubset.add(nums[idx]);
-            
             for(Integer i : subSet)
             {
                 newSubset.add(i);
             }
-            
             res.add(newSubset);
             
             //subSet --> no choice
