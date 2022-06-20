@@ -68,18 +68,23 @@ class Solution {
             return;
         }
         
-        // st --> Starting Point
+        // st --> Starting Point //particular char ka last index jha pr vo place hua
         int st = lastIdx.get(nums[currItem]);
         
+        // st ke baad se loop lgaya
         for(int i = st + 1 ; i < ans.size(); i++)
         {
+            // agar box empty hai toh
             if(ans.get(i) == null)
             {
+                // uss box pr item place kiya and last index update kiya hashmap m
                 ans.set(i,nums[currItem]);
                 lastIdx.put(nums[currItem], i);
             
+                // yes call
                 permutations(currItem+1, nums,lastIdx, ans, res);
-            
+
+                // last index phirse st kr diya and box empty kiya
                 lastIdx.put(nums[currItem], st);
                 ans.set(i,null);
             }
