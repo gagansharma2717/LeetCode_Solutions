@@ -27,11 +27,14 @@ public class Main {
         // taking frequency from hashmap 
         int val = fmap.get(ustr.charAt(i));
         if(val > 0){
+
             // updating frequency by 1
             fmap.put(ustr.charAt(i), val - 1);
+
             // call
             generateSolution(cs + 1, ts , i , ustr ,fmap, ans + ustr.charAt(i));
-            // bactracking
+
+            // backtracking
             fmap.put(ustr.charAt(i), val);
         }
         

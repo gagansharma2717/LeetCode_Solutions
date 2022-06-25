@@ -8,6 +8,30 @@ import java.util.*;
 
 public class Main {
 
+    public static void combination(int i, String ustr, int ssf, int ts, String asf ) {
+
+        // When i is equal to total unique characters
+        if(i == ustr.length()){
+            // and string so far count is equal to given k
+            // just print the answer
+            if(ssf == ts)
+            {
+                System.out.println(asf);
+            }
+
+            return;
+        }
+
+        // yes
+        combination(i+1, ustr, ssf + 1, ts, asf + ustr.charAt(i));
+
+        // no
+        combination(i+1, ustr, ssf, ts, asf + "");
+
+        // call for no is there because we have more boxes
+        // items needs to place are less.
+
+  }
 
   public static void main(String[] args) throws Exception {
     Scanner scn = new Scanner(System.in);
@@ -24,32 +48,6 @@ public class Main {
     }
 
     combination(0, ustr, 0, k, "");
-  }
-
-
-  public static void combination(int i, String ustr, int ssf, int ts, String asf ) {
-    
-    // When i is equal to total unique characters
-    if(i == ustr.length()){
-        // and string so far count is equal to given k
-        // just print the answer
-        if(ssf == ts)
-        {
-            System.out.println(asf);
-        }
-        
-        return;
-    }  
-    
-    // yes
-    combination(i+1, ustr, ssf + 1, ts, asf + ustr.charAt(i));
-    
-    // no
-    combination(i+1, ustr, ssf, ts, asf + "");
-    
-    // call for no is there because we have more boxes
-    // items needs to place are less.
-
   }
 
 }
