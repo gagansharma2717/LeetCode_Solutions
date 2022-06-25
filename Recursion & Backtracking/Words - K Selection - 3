@@ -30,11 +30,14 @@ public class Main {
           // E.g. when k is 2 and we are making call to a3 then continue
           // Continue because of reverse loop else it would be return
           // if we run straight loop
+          // Here we are checking if frequency of character that we are trying to add in answer and existing answer length should
+          // not exceed given k
           if(i + ans.length() > k){
               continue;
           }
           
           String newAns = ans;
+          // Here we are adding the character repeatedly in new string that we pass as new answer for next call.
           for(int j = 1 ; j <= i; j++){
               newAns += ustr.charAt(currCh);
           }
