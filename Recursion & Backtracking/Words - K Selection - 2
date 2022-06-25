@@ -1,6 +1,7 @@
-// 15.
+// 16.
 // Pepcoding
 // Repetition not allowed
+// unique items on level
 
 import java.io.*;
 import java.util.*;
@@ -35,9 +36,9 @@ public class Main {
           // if character is not present in hashset then add it in 
           // arraylist and then in hashset
           if(hset.contains(c) == false){
+              hset.add(c);            
               chs.add(c);
           }
-          hset.add(c);
       }
       
       combination(-1, chs,"", k);
