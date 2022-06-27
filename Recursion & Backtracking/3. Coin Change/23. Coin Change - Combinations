@@ -1,0 +1,57 @@
+// 23.
+// 40. - LeetCode https://leetcode.com/problems/combination-sum-ii/
+// Repetition Not Allowed
+
+class Solution {
+    public void combinations(int target, List<Integer> ansf, List<List<Integer>> res, HashMap<Integer,Integer> fmap, ArrayList<Integer> uniqueCoins, int currCoin){
+    
+        if( target == 0){
+            res.add(new ArrayList<>(ansf));
+            return;
+        }
+        
+        if(currCoin == uniqueCoins.size()){
+            return;
+        }
+        
+        int val = uniqueCoins.get(currCoin);
+        for(int i = 0 ; i <= fmap.get(val); i++){
+            if(target - i * val >= 0){
+    
+                for(int j = 1 ; j <= i; j++){
+                    ansf.add(val);
+                }
+                
+                combinations(target - i * val, ansf,res,fmap,uniqueCoins, currCoin + 1);
+                
+                
+                for(int j = 1 ; j <= i; j++){
+                    ansf.remove(ansf.size()-1);
+                }
+                
+            }                 
+        }
+        
+    }
+    
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> ansf = new ArrayList<>();
+        HashMap<Integer, Integer> fmap = new HashMap<>();
+        ArrayList<Integer> uniqueCoins = new ArrayList<>();
+        
+        for(int val : candidates) {
+            if(fmap.containsKey(val) == false){
+                fmap.put(val, 1);
+                uniqueCoins.add(val);
+            }else{
+                fmap.put(val, fmap.get(val)+ 1);
+            }
+        }
+        
+        combinations(target,ansf,res,fmap,uniqueCoins, 0);
+        
+        return res;
+    }
+}
