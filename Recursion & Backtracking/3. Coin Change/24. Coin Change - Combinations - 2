@@ -1,0 +1,42 @@
+// 24.
+// 39. - LeetCode https://leetcode.com/problems/combination-sum/
+// Repetition Allowed
+class Solution {
+    public void combinations(int currCoin, int target, List<Integer> ansf, List<List<Integer>> res,int[] coins){
+    
+        if( target == 0){
+            res.add(new ArrayList<>(ansf));
+            return;
+        }
+        
+        if(currCoin == coins.length){
+            return;
+        }
+        
+        int val = coins[currCoin];
+        for(int i = 0 ; target - i * val >= 0; i++){
+    
+                for(int j = 1 ; j <= i; j++){
+                    ansf.add(val);
+                }
+                
+                combinations(currCoin + 1, target - i * val, ansf,res,coins);
+                
+                
+                for(int j = 1 ; j <= i; j++){
+                    ansf.remove(ansf.size()-1);
+                }
+                
+            }                 
+    }
+    
+    
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+         List<List<Integer>> res = new ArrayList<>();
+         List<Integer> ansf = new ArrayList<>();
+         
+         combinations(0,target,ansf,res,candidates);
+        
+        return res;
+    }
+}
