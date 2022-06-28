@@ -1,8 +1,9 @@
 // 22.
-// Pepcoding
+// Pepcoding https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/words-klength-words-4-official/ojquestion
 // Permutations
 // Repetition allowed
 // Item on Level
+
 import java.io.*;
 import java.util.*;
 

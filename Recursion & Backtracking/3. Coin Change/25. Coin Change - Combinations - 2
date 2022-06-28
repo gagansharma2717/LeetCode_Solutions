@@ -1,6 +1,7 @@
-// 24.
-// 39. - LeetCode https://leetcode.com/problems/combination-sum/
-// Repetition Allowed
+// 25.
+// 39. - LeetCode Medium https://leetcode.com/problems/combination-sum/
+// Infinite Series
+
 class Solution {
     public void combinations(int currCoin, int target, List<Integer> ansf, List<List<Integer>> res,int[] coins){
     

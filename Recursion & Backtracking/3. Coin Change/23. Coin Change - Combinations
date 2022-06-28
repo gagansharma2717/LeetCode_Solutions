@@ -1,6 +1,6 @@
 // 23.
-// 40. - LeetCode https://leetcode.com/problems/combination-sum-ii/
-// Repetition Not Allowed
+// 40. - LeetCode Medium https://leetcode.com/problems/combination-sum-ii/
+// Finite Series
 
 class Solution {
     public void combinations(int target, List<Integer> ansf, List<List<Integer>> res, HashMap<Integer,Integer> fmap, ArrayList<Integer> uniqueCoins, int currCoin){

@@ -1,6 +1,6 @@
 // 3.
-// 78. - LeetCode
-//Medium
+// 78 - LeetCode Medium https://leetcode.com/problems/subsets/
+
 class Solution {
     public List<List<Integer>> subsets(int[] nums, int idx) {
         

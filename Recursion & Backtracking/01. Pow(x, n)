@@ -1,6 +1,6 @@
 // 1.
-// 50. - LeetCode 
-//Medium
+// 50. - LeetCode Medium https://leetcode.com/problems/powx-n/
+
 class Solution {
      public double myPowHelper(double x, long n)
     {

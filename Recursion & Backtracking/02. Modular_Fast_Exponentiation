@@ -1,9 +1,10 @@
 //2.
-//PepCoding
+//Pepcoding https://www.Pepcoding.com/resources/data-structures-and-algorithms-in-java-interview-prep/number-theory/modular-fast-exponentiation-official/ojquestion
+
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Modular_Fast_Exponentiation {
+public class Main {
 	public static long xpown(long x, long n, long mod) {
 	    
 	    if(n == 0 ) return 1;

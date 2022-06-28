@@ -1,7 +1,8 @@
 // 8.
-// 46. - LeetCode
+// 46. - LeetCode Medium https://leetcode.com/problems/permutations/
 // Method 1
 // Boxes on Level
+
 class Solution {
     public void permutations(int currBox, boolean[] itemsPlaced, List<Integer> boxes,int[] nums, List<List<Integer>> res)
     {
@@ -40,6 +41,7 @@ class Solution {
 // Method 2
 // Items on Level 
 //Swap Method 
+
 class Solution {
     public void swap(int[] nums, int i , int j)
     {
