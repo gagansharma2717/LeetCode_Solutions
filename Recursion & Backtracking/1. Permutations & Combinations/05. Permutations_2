@@ -1,8 +1,9 @@
 // 5.
+// Pepcoding https://www.Pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/permutations-ii-official/ojquestion
 //Boxes on Level
 
 import java.io.*;
-public class Permutations_2  {
+public class Main  {
 
     // n --> no of items
     // k --> no of boxes

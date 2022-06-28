@@ -1,7 +1,8 @@
 // 17.
-// Pepcoding
+// Pepcoding https://www.Pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/words-kselection-3-official/ojquestion
 // Repetition allowed
 // unique items on level
+
 import java.io.*;
 import java.util.*;
 

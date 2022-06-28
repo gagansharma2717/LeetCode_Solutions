@@ -1,7 +1,8 @@
 // 9.
-// 47. - LeetCode
+// 47. - LeetCode Medium https://leetcode.com/problems/permutations-ii/
 // Distinct Permutations
 // Box on Level
+
 class Solution {
     public void permutations(int currBox ,int[] nums, List<Integer> ans, List<List<Integer>> res,HashMap<Integer,Integer> freq){
         // Base case
@@ -60,6 +61,7 @@ class Solution {
 
 //Approach 2
 // Items on Level
+
 class Solution {
 
     public void permutations(int currItem, int[] nums,HashMap<Integer,Integer> lastIdx,List<Integer> ans, List<List<Integer>> res){
