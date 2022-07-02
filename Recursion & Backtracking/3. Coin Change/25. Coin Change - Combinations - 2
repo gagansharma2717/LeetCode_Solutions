@@ -17,9 +17,9 @@ class Solution {
         }
         
          // We are taking value of currentCoin from Coins Array 
-        int val = coins[currCoin];
+         int val = coins[currCoin];
         // In this question we do not need to take care about no. of times, so we simply check for
-       // If current coin into its frequency minus target is greater than or equal to 0
+        // If current coin into its frequency minus target is greater than or equal to 0
         // tb tak loop chalega
         for(int i = 0 ; target - i * val >= 0; i++){
                 

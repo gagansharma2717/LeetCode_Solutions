@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------------------------------
+Step 1 :- Recursion Tree (RT)
+Step 2 :- Recursion Tree -- Levels (Parameters)
+                         -- Options (For)
+Step 3 :- Backtracking -- If you are using any data structure like arraylist, hashmap,hashset
+                          then you need to backtrack it while coming backtrack
+Step 4 :- Result -- Order
+                 -- +ve Base Case 
+                 -- -ve Base Case
+Step 5 :- Dry Run  
+-------------------------------------------------------------------------------------------------------
+// Converting (Row, Col) to Cell means converting 2d-array into 1d-array
+
+RowNo * M + ColNo, where m is the numbers of columns in one row.
+
+// Converting Cell to Row 
+
+Cell / M 
+
+// Converting Cell to Col
+
+Cell % M
+-------------------------------------------------------------------------------------------------------
