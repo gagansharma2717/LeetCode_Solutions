@@ -50,3 +50,54 @@ class Solution {
         return ans;
     }
 }
+
+
+// Approach 2
+class Solution {
+    List<List<Integer>> ans = new ArrayList<>();
+    
+    public void subsets(int lastItem, ArrayList<Integer> unique, HashMap<Integer,Integer> fmap, List<Integer> res){
+       
+       // Adding at each level
+        ans.add(new ArrayList<>(res));
+        
+        // lastitem ke aage hi loop lgaya
+        for(int i = lastItem ; i < unique.size(); i++){
+            // val and frequency li
+            int val = unique.get(i);
+            int oldFreq = fmap.get(val);
+            
+            // it val has frequency greater than 0
+            // val ka frequency 1 se decrease kiya and result m val add kiya 
+            // next call last item ke aage se
+            // then backtracking step
+            if(oldFreq > 0){
+                
+                fmap.put(val, oldFreq - 1);
+                res.add(val);
+                
+                subsets(i, unique, fmap, res);
+                
+                res.remove(res.size() - 1);
+                fmap.put(val,oldFreq);
+            }
+        }
+       
+    }
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        ArrayList<Integer> unique = new ArrayList<>();
+        HashMap<Integer,Integer> fmap = new HashMap<>();
+        
+        for(int val : nums){
+            if(fmap.containsKey(val) == true){
+                fmap.put(val,fmap.get(val) + 1);
+            }else{
+                fmap.put(val,1);
+                unique.add(val);
+            } 
+        }
+        
+        subsets(0, unique, fmap, new ArrayList<>());
+        return ans;
+    }
+}
