@@ -6,7 +6,7 @@ class Solution{
     public boolean canPermutePalindrome(String str){
         HashMap<Character,Integer> fmap = new HashMap<>();
         // Filling Frequency HashMap
-        for(int i = 0 ; i < str.length; i++){
+        for(int i = 0 ; i < str.length(); i++){
             char ch = str.charAt(i);
             fmap.put(ch, fmap.getOrDefault(ch, 0) + 1);
         }
@@ -20,10 +20,9 @@ class Solution{
         }
 
         // If more than one characters have odd frequency then return false 
-        if(oddCount > 0) return false;
+        if(oddCount > 1) return false;
 
         return true;
 
         }
     }
-}
