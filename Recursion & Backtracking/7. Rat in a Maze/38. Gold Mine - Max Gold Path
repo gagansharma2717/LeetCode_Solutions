@@ -1,0 +1,39 @@
+// 38.
+// 1219. LeetCode Medium https://leetcode.com/problems/path-with-maximum-gold/
+// Flood Fill Alike just need to collect gold 
+
+class Solution {
+    int[] x = {0,0,-1,1};
+    int[] y = {-1,1,0,0};
+    public int dfs(int sr, int sc, int[][] grid){
+       if( sr < 0 || sc < 0 || sr >= grid.length || sc >= grid[0].length || grid[sr][sc] == 0 || grid[sr][sc] == -1)         {
+            return 0;
+        }
+           
+         int val = grid[sr][sc];
+         grid[sr][sc] = -1;
+         
+         int maxGold = 0;
+           
+         for(int i = 0; i < 4; i++) {
+             maxGold = Math.max(maxGold, dfs(sr + x[i], sc + y[i], grid));
+         } 
+         grid[sr][sc] = val;
+           
+        return maxGold + grid[sr][sc];
+    }
+    public int getMaximumGold(int[][] grid) {
+        
+        int maxGold = 0 ;
+        
+        for(int i = 0 ; i < grid.length; i++){
+            for(int j = 0 ; j < grid[0].length; j++){
+                
+                int currAns = dfs(i,j,grid);
+                maxGold = Math.max(currAns, maxGold);
+            }
+        }
+        
+        return maxGold;
+    }
+}
