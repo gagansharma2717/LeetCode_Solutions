@@ -15,9 +15,9 @@ RowNo * M + ColNo, where m is the numbers of columns in one row.
 
 // Converting Cell to Row 
 
-Cell / M 
+row = Cell / M, where m is (chess.length)
 
 // Converting Cell to Col
 
-Cell % M
+col = Cell % M,  where m is (chess.length)
 -------------------------------------------------------------------------------------------------------
