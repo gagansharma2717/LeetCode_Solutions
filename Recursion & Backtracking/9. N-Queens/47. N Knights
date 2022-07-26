@@ -1,6 +1,11 @@
 // 45. PepCoding
 // https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/nknights-combinations-2das1d-knight-chooses-official/ojquestion
 
+// N Knights 2d as 1d
+// A Knight standing at one cell can move (i-1,j-2), (i-2,j-1), (i-2,j+1), (i-1, j+2) where i is row and j is 
+column so agr board ke ander hi h hm but vha pr pehle se koi knight placed h toh return false nhi toh 
+last cell + 1 se loop lgaya check kiya if knight is not placed and it is safe to place knight so place kiya next call lgyai aate hu unplaced kiya backtracking step and base case m print kr diya
+
 import java.io.*;
 import java.util.*;
 
