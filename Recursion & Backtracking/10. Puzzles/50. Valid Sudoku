@@ -1,0 +1,63 @@
+// 50.
+// 36. LeetCode https://leetcode.com/problems/valid-sudoku/
+
+class Solution {
+    public boolean isValid(char[][] board, int row, int col, char ch){
+         
+          // row element
+        for(int j=0; j<9; j++){
+            if(board[row][j] == ch && j != col){
+                return false;
+            }
+        }
+        
+        // column element
+        for(int i=0; i<9; i++){
+            if(board[i][col] == ch && i != row){
+                return false;
+            }
+        }
+        
+        // sub-matrix
+        int smi = row / 3 * 3;
+        int smj = col / 3 * 3;
+        
+        for(int i = 0 ; i < 3; i++){
+        for(int j = 0 ; j < 3; j++){
+            if(board[smi + i][smj + j] == ch  && smi + i != row && smj + j != col){
+                    return false; 
+            }
+            
+           }
+        }
+            
+        return true;
+    } 
+    
+    public boolean solveSudoku(char[][] board, int row, int col){
+        if(row == 9) return true;
+        
+        int nrow = 0;
+        int ncol = 0;
+        
+        if(col == 8){
+            nrow = row + 1;
+            ncol = 0;
+        }else{
+            nrow = row;
+            ncol = col + 1;
+        }
+        
+        if(board[row][col] != '.'){
+            
+            if(isValid(board, row, col , board[row][col]) == false) return false;
+        }
+        
+        return solveSudoku(board, nrow, ncol);
+    }
+        
+
+    public boolean isValidSudoku(char[][] board) {
+        return solveSudoku(board, 0, 0);
+    }
+}
