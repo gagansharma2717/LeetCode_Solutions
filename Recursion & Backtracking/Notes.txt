@@ -1,4 +1,4 @@
--------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------
 Step 1 :- Recursion Tree (RT)
 Step 2 :- Recursion Tree -- Levels (Parameters)
                          -- Options (For)
@@ -8,7 +8,7 @@ Step 4 :- Result -- Order
                  -- +ve Base Case 
                  -- -ve Base Case
 Step 5 :- Dry Run  
--------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------
 // Converting (Row, Col) to Cell means converting 2d-array into 1d-array
 
 RowNo * M + ColNo, where m is the numbers of columns in one row.
@@ -20,4 +20,4 @@ row = Cell / M, where m is (chess.length)
 // Converting Cell to Col
 
 col = Cell % M,  where m is (chess.length)
--------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------
