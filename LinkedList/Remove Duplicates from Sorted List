@@ -1,0 +1,67 @@
+// 83. Remove Duplicates from Sorted List https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+// Using AddLast Approach
+
+class Solution {
+    // temporary head = th and tt = temporary tail;
+    ListNode th = null, tt = null;
+    public void addLast(ListNode node){
+        if(tt == null){
+            th = tt = node;
+        }else{
+            tt.next = node;
+            tt = node;
+        }
+    }
+    // Using AddLast Approach
+    public ListNode deleteDuplicates(ListNode head) {
+        if(head == null || head.next == null) return head;
+        
+        
+        ListNode curr = head;
+        while(curr != null){
+            // forward = forw;
+            // Storing curr ka next
+            ListNode forw = curr.next;
+            // breaking the connection from current
+            curr.next = null;
+            
+            // if temptail is null ya temp tail value is not equal to current val toh addLast krlo
+            if(tt == null || tt.val != curr.val) addLast(curr);
+            
+            // curr pointer ko aage move krdo 
+            curr = forw;
+        }
+        
+        return th;
+    }
+}
+
+// Using dummy node
+class Solution {
+   
+    public ListNode deleteDuplicates(ListNode head) {
+        if(head == null || head.next == null) return head;
+        
+        // dummy node and iterator pointing to dummy node
+        ListNode dummy = new ListNode(-(int) 1e8);
+        ListNode itr = dummy;
+        ListNode curr = head;
+        while(curr != null){
+            // If itr val is equal to curr value and both are not null then increase current
+            while(curr != null && itr.val == curr.val){
+                curr = curr.next;
+            }
+            
+            // when these two values are not equal then iterator ke next m current means making a node to non equal node
+            // move iterator
+            itr.next = curr;
+            itr = itr.next;
+            
+            // If current is not at last then move curr
+            if(curr != null) curr = curr.next;
+        }
+        
+        
+        return dummy.next;
+    }
+}
