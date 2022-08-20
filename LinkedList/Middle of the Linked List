@@ -8,9 +8,10 @@ class Solution {
             return null;
         }
         
-        ListNode slow= head;
+        ListNode slow = head;
         ListNode fast = head;
         
+        // For even && For odd
         while(fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
