@@ -38,30 +38,25 @@ class Solution {
 
 // Using dummy node
 class Solution {
-   
     public ListNode deleteDuplicates(ListNode head) {
         if(head == null || head.next == null) return head;
         
-        // dummy node and iterator pointing to dummy node
-        ListNode dummy = new ListNode(-(int) 1e8);
-        ListNode itr = dummy;
-        ListNode curr = head;
-        while(curr != null){
-            // If itr val is equal to curr value and both are not null then increase current
-            while(curr != null && itr.val == curr.val){
-                curr = curr.next;
+        
+        ListNode dummy = new ListNode(-1);
+        ListNode tail = dummy;
+
+        while(head != null){
+            
+            if(tail == dummy || head.val != tail.val){
+                tail.next = head;
+                tail = head;    
             }
             
-            // when these two values are not equal then iterator ke next m current means making a node to non equal node
-            // move iterator
-            itr.next = curr;
-            itr = itr.next;
-            
-            // If current is not at last then move curr
-            if(curr != null) curr = curr.next;
-        }
-        
-        
+            head = head.next;
+        }        
+                
+        tail.next = null;
         return dummy.next;
     }
 }
+
