@@ -1,7 +1,9 @@
 {
     "java.project.sourcePaths": [
         "Trees",
+        "Recursion & Backtracking",
         "Graph",
-        "Recursion & Backtracking"
-    ]
+        "Stack & Queues"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
