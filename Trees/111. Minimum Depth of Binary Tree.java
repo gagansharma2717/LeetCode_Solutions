@@ -23,4 +23,8 @@ class Solution {
     }
 }
 
-Follow Up : Minimum Path Sum from root node to any leaft node
+Follow Up : Minimum Path Sum from root node to any leaf node
+TC : O(N)
+SC : O(H) Recursion call stack space
+O(log n) - balanced average case
+O(N) skewed tree worst case
