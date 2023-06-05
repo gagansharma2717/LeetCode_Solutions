@@ -1,6 +1,8 @@
- //Easy
+// 925. Long Pressed Name 
+// https://leetcode.com/problems/long-pressed-name/
 class Solution {
     public boolean isLongPressedName(String name, String typed) {
+        // Edge case - when typed string is shorter itself
         if(name.length() > typed.length()) return false;
         
         int i = 0 ;
@@ -12,7 +14,7 @@ class Solution {
             {
                 i++;
                 j++;
-            }
+            } // checking with previous character 
             else if(i > 0 && name.charAt(i - 1) == typed.charAt(j))
             {
                 j++;
@@ -23,6 +25,7 @@ class Solution {
             }
         }
         
+        // typed characters are still left 
         while(j < typed.length())
         {
             if(name.charAt(i - 1) == typed.charAt(j))
@@ -35,6 +38,7 @@ class Solution {
             }
         }
         
+        // when i is not reached to last character in name then false else true
         return i < name.length() ? false : true;
     }
 }
