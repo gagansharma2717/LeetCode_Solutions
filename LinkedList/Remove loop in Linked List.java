@@ -1,4 +1,4 @@
-// Remove loop in Linked List GFG
+f// Remove loop in Linked List GFG
 // https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1
 
 class Solution
