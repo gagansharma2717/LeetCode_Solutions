@@ -1,4 +1,4 @@
-2class Solution {
+class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
 

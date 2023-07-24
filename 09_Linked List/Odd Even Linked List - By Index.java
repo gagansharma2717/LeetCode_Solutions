@@ -1,4 +1,4 @@
-// Segregate even and odd nodes in a Link List - GFG
+ // Segregate even and odd nodes in a Link List - GFG
 // https://practice.geeksforgeeks.org/problems/segregate-even-and-odd-nodes-in-a-linked-list5035/1
 // Similar like sort 01
 
