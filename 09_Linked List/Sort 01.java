@@ -1,4 +1,4 @@
-// Sort Binary Linked List - InterviewBit
+ // Sort Binary Linked List - InterviewBit
 // https://www.interviewbit.com/problems/sort-binary-linked-list/
 
 public class Solution {

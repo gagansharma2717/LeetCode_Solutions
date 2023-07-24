@@ -1,4 +1,4 @@
-// GFG Given a linked list of 0s, 1s and 2s, sort it.
+ // GFG Given a linked list of 0s, 1s and 2s, sort it.
 // https://practice.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1
 
 

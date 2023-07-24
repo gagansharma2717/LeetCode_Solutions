@@ -1,4 +1,4 @@
-// Basic Idea is 2 linkedlist bnai ek odd ko process kregi second one will process even nodes
+  // Basic Idea is 2 linkedlist bnai ek odd ko process kregi second one will process even nodes
 // at last second ko reverse krke first one se link kr denge
 // PepCoding
 
