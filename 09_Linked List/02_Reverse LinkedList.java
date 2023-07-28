@@ -57,7 +57,6 @@ public void reversePI()
 
 
 // Data Recursive: O(N):
-// 2 Methods: Using Data Member left & Using Return Type
 
     Node left;  // pointing to head
     public void reverseDRHelper1(Node right, int counter){
@@ -73,33 +72,9 @@ public void reversePI()
         
         left = left.next;
     }
-
-
-    
-    // public Node reverseDRHelper2(Node left, Node right, int counter){
-    //     if(right == null)  return left;
-        
-       
-    //     left = reverseDRHelper2(left, right.next, counter + 1);
-        
-        
-    //     if(counter >= size/2){
-    //         int temp = left.data;
-    //         left.data = right.data;
-    //         right.data = temp;
-    //     }
-        
-        
-    //     left = left.next;
-    //     return left;
-    // }
-    
     public void reverseDR() {
          left = head;
          reverseDRHelper1(head, 0);
-    
-        // reverseDRHelper2(head, head, 0);
-        
     }
 
 
