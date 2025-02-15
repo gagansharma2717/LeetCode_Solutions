@@ -10,7 +10,7 @@ class Solution {
         }
         
         
-        int mid = low + (high - low) / 2;
+        int mid = low + (high - low) / 2; // Safe from Overflow
         
         mergeSort(arr,low, mid);
         mergeSort(arr,mid+1,high);
