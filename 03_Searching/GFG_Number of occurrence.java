@@ -7,7 +7,6 @@ class Solution {
         
         return last - first + 1;
         
-        
     }    
     
     public static int first_occ(int[]arr, int x)
